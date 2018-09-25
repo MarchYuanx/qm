@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Douban</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="TaionNav">
+        <!-- 语义化 比div更传达标题 -->
+        <header class="TalionNav">
+            <div class="TalionNav-primary">
+                <a href="/">
+                    <h1>豆瓣</h1>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#">电影</a></li>
+                        <li><a href="#">图书</a></li>
+                        <li><a href="#">广播</a></li>
+                        <li><a href="#">小组</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="page"> 
+        <div class="card">
+            <ul class="quick-nav">
+                <li><a href="#">影院热映</a></li>
+                <li><a href="#">同城活动</a></li>
+                <li><a href="#">豆瓣时间</a></li>
+                <li><a href="#">使用豆瓣App</a></li>
+            </ul>
+            <section id="recommend-feed">
+                <div data-reactroot>
+                    <div class="feed-section">
+                        <a class="feed-item" href="#"> 
+                            <div class="feed-content">
+                                    <div class="cover" style="position: relative; background: url(&quot;https://img3.doubanio.com/view/note/sqs/public/p53259972.jpg&quot;) center center / cover no-repeat rgb(250, 250, 250);">
+                                        <div style="padding-top: 100%;">
+                                        </div>
+                                    </div>
+                                <h3>提升幸福感的实用租房居家好物（亲测）</h3>
+                                <p>8月25日，更新一下价格，这样大家如果觉得价格不合适就可以直接略过，价格合适的话，就可以在评论区直接找链接，
+                                    找不到可以留言问问看，基本都有朋友问过了，如果实在懒得翻留言，就在文末关注公众号后，发送关键词“每天都要开心鸭”，就可以一键获得所有的链接了。</p>
+                            </div>
+                            <div class="author">
+                                by&nbsp;
+                                <span class="name">巫婆婆</span>
+                            </div>
+                            <span class="feed-label"></span>
+                        </a>
+
+                        <hr style="width: 97%; opacity:0.2; float: right ;">
+                        <!-- 2 -->
+                        <a class="feed-item" href="#"> 
+                                <div class="feed-content">
+                                        <!-- <div class="cover" style="position: relative; background: url(&quot;https://img3.doubanio.com/view/note/sqs/public/p53259972.jpg&quot;) center center / cover no-repeat rgb(250, 250, 250);">
+                                            <div style="padding-top: 100%;">
+                                            </div>
+                                        </div> -->
+                                    <h3>税后即亡</h3>
+                                    <p>五岁
+                                            许多十四岁生日那天，母亲给她在学校请了假，早早地唤她出门。她们先到商场买了一条精致华丽的裙子，又去吃了她对着橱窗艳羡已久的三层翻糖蛋糕。随后，许多穿着新裙子同母亲去到税务大厅，母亲小心翼翼地对着工作人员说：“这孩子，今天十四岁了。”
+                                            
+                                            柜台里的工作人员瞥了她一眼：“编号、姓名”
+                                            
+                                            “编号202011280314，姓名许多”
+                                            
+                                            那人在电脑上翻了翻许多的人生档案，不到一分钟，他说：“手环可以摘下来了”
+                                            
+                                            。</p>
+                                </div>
+                                <div class="author">
+                                    by&nbsp;
+                                    <span class="name">当当</span>
+                                </div>
+                                <span class="feed-label"></span>
+                            </a>
+    
+                            <hr style="width: 97%; opacity:0.2; float: right ;">
+                            <!-- 3 -->
+                            <a class="feed-item" href="#"> 
+                                    <div class="feed-content">
+                                            <div class="cover" style="position: relative; background: url(&quot;https://img1.doubanio.com/view/note/sqs/public/p53882287.jpg&quot;) center center / cover no-repeat rgb(250, 250, 250);">
+                                                <div style="padding-top: 100%;">
+                                                </div>
+                                            </div>
+                                        <h3>如何逃出“晚上不想睡，早上起不来”的怪圈？</h3>
+                                        <p>意识先行，行动自然随之。
+
+
+                                                人长大最大的好处是慢慢具备了「想干什么就干什么的能力」。
+                                                
+                                                初中念住宿学院，晚上熄灯后讲几句悄悄话都要扣分，被处罚，害得我读Harry Potter时对学院扣分的惩罚特别有同理心。那会儿又不习惯睡午觉，硬逼着在课桌上趴一中午，偷偷看本小说又扣分，detention。
+                                                
+                                                长大的好处，想干什么就干什么，想几点睡觉就几点睡觉，晚上不止可以讲话，可以唱歌，可以跳舞，可以宿醉，可以做爱，自由极了自由极了，去他妈的detention。
+                                                
+                                                但人长大最需要知道的，是要懂得限制自己。</p>
+                                    </div>
+                                    <div class="author">
+                                        by&nbsp;
+                                        <span class="name">姜小白 </span>
+                                    </div>
+                                    <span class="feed-label"></span>
+                                </a>
+        
+                                <hr style="width: 97%; opacity:0.2; float: right ;">
+
+                    </div>
+
+                    <div id="infinite-scroll-trigger"></div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+

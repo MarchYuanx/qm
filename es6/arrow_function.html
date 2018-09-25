@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrow function</title>
+    <style>
+        .wrap{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-weight: 100;
+            color: white;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            padding: 50px;
+            background: black url(https://unsplash.it/1500/1500?image=560&blur=0.5)
+            center fixed no-repeat;
+            transition: width .2s, height .2s;
+        }
+        .box.opening{
+            width: 500px;
+            height: 500px;
+        }
+
+        .box h2{
+            position: absolute;
+            width: 100%;
+            font-size: 100px;
+            top: 0;
+            transform: translateX(-200%);
+            transition: all .5s;
+        }
+        
+        .box p{
+            position: absolute;
+            width: 100%;
+            transform: translateX(200%);
+            transition: all .5s;
+            bottom: 8%;
+        }
+
+        .box.open > * {
+            transform: translateX(0%);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">
+            <h2>Wes Bos</h2>
+            <p class="social">@wesbos</p>
+        </div>
+    </div>
+
+    <script>
+
+        const box = document.querySelector('.box');
+        box.addEventListener('click',function(){
+            //
+            //*b
+            //1
+            //1 2
+            //
+            //
+            //
+            let first = 'opening';
+            let second = 'open';
+
+
+            if(this.classList.contains(first)){
+                [first,second] = [second,first];
+            }
+            this.classList.toggle(first);
+            
+            let that = this;
+
+            setTimeout(() =>{
+                //函数内部的函数，新的函数作用域
+                //this 指针 如果这个函数是个普通函数 this指向window
+                console.log(this);
+                this.classList.toggle(second);
+                // ()=>{}
+                // 箭头函数内部this 指向父级
+                
+            },250);
+            //添加类名   
+            //this.classList.add();
+            //this.classList.toggle();   
+            //
+            //console.log(this);
+            
+            
+            console.log(this);
+
+        });
+
+        // const num = 1;
+        // const str = 'abc';
+        // const isOK = false;
+        // const a = undefined;
+        // const b = null;
+
+        // const obj = {name:'刘强东'};
+        // const remark = ['不知妻美','我到美国是去学习的'];
+        // const funcA = function(){
+        //     console.log('help me!');
+        // }
+        
+        // console.log(typeof obj,typeof remark,typeof funcA);
+        // console.log(typeof num,typeof str,typeof isOK,typeof a,typeof b);
+
+
+        //单一功能
+        //function对象
+        // () => {
+
+        // }
+    </script>
+</body>
+</html>
