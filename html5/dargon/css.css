@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100vh;
+    /* font-size: 41.4px; */
+    min-width: 10rem;
+    margin-left: auto;
+    margin-left: auto;
+    background: transparent;
+}
+
+
+/* 栅格系统 */
+.row{
+    width: 100%;
+    height: 100vh;
+    font-size: 0;
+}
+
+.col-1, .col-2,.col-5, .col-8{
+    height: 100%;
+    display: inline-block;
+    background-color: rgb(83, 245, 83);
+}
+
+.col-1{
+    width: 1rem;    
+}
+
+.col-2{
+    width: 2rem;
+}
+.col-5{
+    width: 5rem;
+}
+.col-8{
+    width: 8rem;
+}
+.row>:nth-child(odd){
+background: rgb(236, 67, 236);
+}
