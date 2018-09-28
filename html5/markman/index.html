@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:link{
+        color: #3377aa;
+    }
+    a:visited{
+        color: #666699;
+    }
+    .content{
+        width: 1040px;
+        margin: 0 auto;
+    }
+
+    
+
+    .article{
+        width: 675px;
+        float: left;
+        height: 500px;
+        background-color: rgb(76, 102, 247);
+    }
+
+    .aside{
+        width: 300px;
+        float: right;
+        height: 500px;
+        /* background: rgb(241, 50, 50); */
+    }
+
+    /* 重复的部分 ui组件 */
+    .rating_answer,.hot-link{
+        margin-bottom: 20px;
+        line-height: 1.5;
+        border-radius: 4px;
+    }
+
+
+
+    .rating_answer{   
+        padding: 12px 0 12px 18px;   
+        background: #f2f7f6;
+        
+    }
+
+    .rating_answer ur{
+        font-size: 14px;
+        color: #cedcd9;
+    }
+    .rating_answer li{
+        font-size: 13px;
+        color: #cedcd9;
+    }
+    .ad{
+        height: 250px;
+        background-color: orange;
+        margin-bottom: 20px;
+    }
+    .hot-link{  
+        padding: 16px 0 16px 18px;   
+        background: #f2f7f6;
+    }
+    .hot-link h2{
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: #007722;
+        font-size: 16px;
+    }
+
+    .hot-link ul{
+        font-size: 14px;
+        color: #cedcd9;
+    }
+    .hot-link li{
+        margin-top: 8px;
+        font-size: 13px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="article"></div>
+        <div class="aside">
+            <div class="rating_answer">
+                <ul>
+                    <li><a href="" target="_blank">豆瓣电影评分八问</a></li>
+                </ul>
+            </div>
+            <div class="ad"></div>
+            <div class="hot-link">
+                <h2>电影活动&nbsp;.&nbsp;.&nbsp;.</h2>
+                <ul>
+                    <li><a href="#" target="_blank">今晚我有空 |看完这电影想立马丢掉电脑！</a></li>
+                    <li><a href="#" target="_blank">好莱坞电影工业深度探访交流</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
