@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .box {
+    position: relative;
+    }
+    .box:before, .box:after {
+        display: block;
+        background:red;
+        line-height: 2;
+        position: absolute;
+        left:0;
+        right: 0;
+        height: 1px;
+        background-color: #333;
+    } 
+    .box::before{
+        content: "";
+        display: block;
+        background: red;
+        line-height: 2;
+        position: absolute;
+        top: 0;
+    }    
+    .box::after{
+        content:"";
+        display: block;
+        background: green;
+        line-height:2;
+        bottom: 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        I AM A BOX.
+
+
+        
+    </div>    
+</body>
+</html>

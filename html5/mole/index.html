@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打地鼠</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Whack-a-mole!<span class="score">0</span></h1>
+    <button onclick="startGame()" class="start">Start!</button>
+
+
+    <div class="game">
+        <div class="hole hole1">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole2">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole3">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole4">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole5">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole6">
+            <div class="mole"></div>
+        </div>
+    </div>
+
+    <script>
+            const holes = document.querySelector('.hole');
+            const scoreBoard = document.querySelector('.score');
+            const moles = document.querySelectorAll('.mole');
+
+            let score = 0;
+            //表状态 上一次是哪个洞 随机生成的一样的话，再随机一次 lastHole=随机生成数
+            let lastHole;
+            let timeUp = false;
+            let isPlaying = false;
+
+            function startGame(){
+                if(isPlaying) return;
+                isPlaying = true;
+                scoreBoard.textContent = 0;
+                timeUp = false; 
+                score = 0;
+                
+                peep();
+                console.log('peep');
+
+
+                setTimeout(()=>{
+                    timeUp = true;
+                    isPlaying = false;
+                    alert('游戏结束');
+                },20000)
+            }
+
+
+            function peep(){
+
+            }
+
+            function bonk(e){
+                score++;
+                this.parentNode.classList.remove('up');
+                scoreBoard.textContent = score;
+            }
+
+
+            moles.forEach(mole => moles.addEventListener('click',bonk));
+
+        </script>
+
+</body>
+</html>
