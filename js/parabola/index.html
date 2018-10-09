@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抛物线运动</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .ball{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+    }
+    .ball2{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #66ccff;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    
+    <script>
+        //抛物线开始点坐标 结束点坐标
+        let XStart = 0, YStart = 0; XEnd = 500, YEnd = 500;
+        //运动时间
+        let Time = 100;//ms
+        let XSpeed = (XEnd - XStart) / Time;
+        let YSpeed = (YEnd - YStart) / Time;
+        let Gravity = 2*(YEnd - YStart) / (Time*Time);
+        
+        //js 动态创建元素
+        let ball = document.createElement('div');
+        ball.className = 'ball';
+        document.body.appendChild(ball);
+
+        ball.style.top = YStart + 'px';
+        ball.style.left = XStart + 'px';
+
+        let nowX = XStart;
+        let nowY = YStart;
+        let loop = 0;
+
+
+        // 2X100 1X200
+
+
+
+        // 递归
+        let move = () => {
+                requestAnimationFrame(()=>{
+
+                if(nowY >= YEnd){
+                    ball.parentNode.removeChild(ball);
+                    return;
+                }
+
+                console.log('ball-log');              
+
+                nowX += XSpeed;
+                nowY += Gravity*loop;
+
+                ball.style.top = nowY + 'px';
+                ball.style.left = nowX + 'px';
+                    
+           
+                loop++;
+                move();
+                
+            })
+        }
+
+        move();
+        
+
+    </script>
+</body>
+</html>

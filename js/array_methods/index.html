@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Array</title>
+</head>
+<body>
+    <script>
+        const race = '100m Dash';
+        const winners = ['Hunber Gath','Singa Song','Imda Bos'];
+        //生成json 数组 item json{ name: , race: ,place: }
+
+        var winner = {};
+        
+        for(let index = 0; index < winners.length; index++){
+            winner.name = winners[index];
+            winner.race = race;
+            winner.place = index+1;
+            console.log(winner);
+        };
+
+        console.log('-------------');
+        
+        const win = [];
+
+        for(let i = 0;i<winners.length; i++){
+           win.push({
+                name:winners[i],
+                race:race,
+                place: i+1
+           });
+        }
+        
+        console.log(win)
+        console.log('---------------')
+        
+
+        //函数分析
+        //箭头函数只有一句代码并且是返回值 可省去return
+        const win2 = winners.map((w,i)=>({
+                name:w,
+                race,
+                place:i+1
+            })
+        );
+
+        console.log(win2)
+    </script>
+</body>
+</html>
