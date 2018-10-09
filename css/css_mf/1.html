@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background: #888;
+            height: 100%;
+        }
+        .left{
+            /* float 会离开文档流 */
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 3px solid #F31264;
+            background: #73de80;
+            opacity: .5;
+        }
+        .right{          
+            width: 400px;
+            min-height: 100px;
+            border: 3px solid #F31264;
+            background: #ef6be2;
+            opacity: .5;
+        }
+
+        .BFC{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box BFC">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
