@@ -16,24 +16,40 @@
         border-radius: 50%;
         background-color: orange;
         position: absolute;
+        z-index: 1;
     }
-    .ball2{
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #66ccff;
+    .big{
+        width: 12px;
+        height: 12px;
+    }
+    .ground{
+        top: 510px;
+        width: calc(100% - 50px);
+        
+        height: 8px;
+        background: #666;
+
+        z-index: 999;
         position: absolute;
+
+        left: 0;
+        right: 0;
+           
+        margin: auto;
     }
     </style>
 </head>
 <body>
+
+    <div class="ground"></div>
     
     <script>
         //抛物线开始点坐标 结束点坐标
         let XStart = 0, YStart = 0; XEnd = 500, YEnd = 500;
         //运动时间
-        let Time = 100;//ms
-        let XSpeed = (XEnd - XStart) / Time;
+        let Time = 50;//ms
+        // let XSpeed = (XEnd - XStart) / Time;
+        let XSpeed = 2;
         let YSpeed = (YEnd - YStart) / Time;
         let Gravity = 2*(YEnd - YStart) / (Time*Time);
         
@@ -45,40 +61,72 @@
         ball.style.top = YStart + 'px';
         ball.style.left = XStart + 'px';
 
+        // ground.style.top = (YEnd + ball.style.height)+'px';
+
         let nowX = XStart;
         let nowY = YStart;
         let loop = 0;
+        let count = 0;
 
 
-        // 2X100 1X200
-
-
+        
 
         // 递归
         let move = () => {
                 requestAnimationFrame(()=>{
 
                 if(nowY >= YEnd){
-                    ball.parentNode.removeChild(ball);
+                    
+                    // ball.parentNode.removeChild(ball);
+                    count++;
+                    if(count>25){
+                        return;
+                    }
+                    Gravity = 0.5*Gravity;
+                    bounce();
                     return;
-                }
-
-                console.log('ball-log');              
+                }            
 
                 nowX += XSpeed;
                 nowY += Gravity*loop;
 
                 ball.style.top = nowY + 'px';
                 ball.style.left = nowX + 'px';
-                    
-           
+                            
                 loop++;
                 move();
                 
             })
         }
 
+
+        let bounce = () => {
+            
+            requestAnimationFrame(()=>{
+                if(loop<=0){
+                    Gravity = 2*Gravity;                   
+                    move();
+                    return;
+                }
+            nowX += XSpeed;
+            nowY -= Gravity*loop ;
+
+            ball.style.top = nowY + 'px';
+            ball.style.left = nowX + 'px';
+
+            loop--;
+            bounce();
+            })
+            
+            
+        }
+
+
+
+
+
         move();
+        
         
 
     </script>
