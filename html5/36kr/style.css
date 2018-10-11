@@ -1,0 +1,59 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.article-detail .single-post-comment h4 {
+    font-size: 16px;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1.6rem;
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.article-detail .single-post-comment .input-module {
+    margin-bottom: 2rem;
+}
+
+.article-detail .single-post-comment .display-module {
+    text-align: center;
+}
+
+.article-detail .single-post-comment .input-module .textarea-wrapper {
+    width: 100%;
+    border: 1px solid #d3d7db;
+    border-radius: 3px;
+}
+
+.article-detail .single-post-comment .input-module .textarea-wrapper textarea {
+    outline: none;
+    -webkit-appearance: none;
+    padding: .25rem .5rem;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    resize: none;
+    height: 5rem;
+}
+
+.article-detail .single-post-comment .notlogin textarea {
+    -webkit-user-select: none;
+    background-color: #fafafa;
+    color: #b6cad9;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.article-detail .single-post-comment .input-module .textarea-wrapper .user {
+    padding: .35rem .5rem;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
