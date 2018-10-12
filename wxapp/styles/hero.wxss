@@ -1,0 +1,7 @@
+.hero image, .hero video{
+    height: 48.2vh;
+}
+
+.hero.white{
+    background: #fff;
+}
