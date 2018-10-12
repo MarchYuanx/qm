@@ -1,6 +1,14 @@
 const app = getApp()
 
+Page({
+    data:{
 
-page({
+    },
+    onLoad(options){
+        console.log('onload');
 
+    },
+    onReady:function(){
+        
+    }
 });
