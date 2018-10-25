@@ -24,7 +24,7 @@
       },
       {
         "text": "故事",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/stories/index",
         "iconPath": "assets/icons/event.png",
         "selectedIconPath": "assets/icons/event-active.png"
       }
