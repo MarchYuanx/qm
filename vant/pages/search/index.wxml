@@ -1,0 +1,23 @@
+<!-- 封装一个组件 可以复用组件的介绍功能，适用于所有的组件 -->
+
+<demo-block title="基本用法">
+    <van-search value="{{value}}" placeholder="请输入搜索关键词" 
+    bind:change="onChange" bind:search="onSearch"/>
+</demo-block>
+
+<demo-block title="自定义行动按钮">
+    <van-search value="{{value}}" placeholder="请输入搜索关键词" use-action-slot
+    bind:change="onChange" bind:search="onSearch">
+    <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+</demo-block>
+
+<demo-block title="listen对印事件">
+    <van-search value="{{value}}" placeholder="请输入搜索关键词"
+    show-action bind:change="onChange" bind:search="onSearch" bind="onCancel"/>
+</demo-block>
+
+
+
+
+

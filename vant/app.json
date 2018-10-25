@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/search/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    
+    "components/demo-block/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

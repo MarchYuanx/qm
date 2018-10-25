@@ -1,0 +1,7 @@
+<!--components/demo-block/index.wxml-->
+<!-- <text>components/demo-block/index.wxml</text> -->
+
+<view class="custom-class demo-block">
+    <view class="demo-block__title">{{title}}</view>
+    <slot />
+</view>
