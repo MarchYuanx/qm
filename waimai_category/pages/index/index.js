@@ -47,15 +47,15 @@ Page({
     })
 
     //onReay 取屏幕高度
-    // wx.getSystemInfo({
-    //   success: (res) => {
-    //     let pageHeight = res.windowHeight      
-    //     console.log(pageHeight)
-    //     this.setData({
-    //       pageHeight
-    //     })
-    //   }
-    // })
+    wx.getSystemInfo({
+      success: (res) => {
+        let pageHeight = res.windowHeight      
+        console.log(pageHeight)
+        this.setData({
+          pageHeight
+        })
+      }
+    })
 
     
    
