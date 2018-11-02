@@ -20,32 +20,33 @@ Page({
     let oImgW = e.detail.width;
     let oImgH = e.detail.height;
     let imgWidth = this.data.imgWidth;
-    let scale = imgWidth / oImgW;
+    let scale = imgWidth/oImgW;
     let imgHeight = oImgH * scale;
 
     let images = this.data.images;
     let imageObj = null;
-    for (let img of images) {
-      if (img.id === imageId) {
+    for(let img of images){
+      if(img.id === imageId){
         imageObj = img;
         break;
       }
     }
-    // console.log(imageObj);
-    imageObj.height = imgHeight
 
-    let loadingCount = this.data.loadingCount -1 ;
-    
+    // console.log(imageObj);
+    imageObj.height = imgHeight;
+    let loadingCount = this.data.loadingCount - 1;
     let col1 = this.data.col1;
     let col2 = this.data.col2;
+
     
-    if (col1H <= col2H) {
+    if(col1H<=col2H){
       col1H += imgHeight;
       col1.push(imageObj);
-    } else {
+    }else{
       col2H += imgHeight;
       col2.push(imageObj);
     }
+
 
     let data = {
       loadingCount,
@@ -76,8 +77,8 @@ Page({
       }
     })
   },
-  loadImages() {
-    // image 有onload 事件 
+  loadImages(){
+    // image 有onload事件
     let images = [
       { pic: "../../images/1.png", height: 0},
       { pic: "../../images/2.png", height: 0},
