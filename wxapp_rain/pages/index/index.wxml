@@ -1,0 +1,4 @@
+<view >
+  <canvas id="effect" canvas-id="effect">canvas</canvas>
+
+</view>
