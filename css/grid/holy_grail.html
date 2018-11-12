@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grail</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-width: 600px;
+        }
+        .header, .footer {
+            text-align: center;
+            width: 100%;
+            line-height: 1.5;
+            color: white;
+            background-color: grey;
+            
+        }
+        .bd {
+            overflow: hidden;
+            padding: 0 200px;
+        }
+        /* main为什么要放在第一列 
+            main 它会显示的最快 dom树渲染
+
+        */
+        .main {
+            /* 块级元素  */
+            float: left;
+            width: 100%;
+            height: 160px;
+            background-color: #ddd;
+        }
+        .left{
+            float: left;
+            margin-left: -100%;
+            width: 200px;
+            height: 160px;
+            background-color: #ff5151;
+            left: -200px;
+            position: relative;
+            /* 以自身左上角(0,0)定位 */
+        }
+        .right{
+            float: left;
+            width: 200px;
+            height: 160px;
+            background: #66ccff; 
+            position: relative; 
+            left: 200px;
+            margin-left: -200px;                                   
+        }
+
+       .text{
+                text-align: center;
+                line-height: 160px;
+                font-size: 40px;
+                color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">Header</div>
+
+    <div class="bd">
+        <div class="main text">Main</div>
+        <div class="left text">Nav</div>
+        <div class="right text">Aside</div>
+    </div>
+
+    <div class="footer">Footer</div>
+              
+</body>
+</html>
