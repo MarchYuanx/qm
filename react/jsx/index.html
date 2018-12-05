@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSX</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <style>
+    .greeting{
+      color: #FF5151;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const user = {
+      firstName: '岛田',
+      lastName: '源氏'
+    }
+    const name = '宋哈娜';
+
+    function format(user) {
+      return user.firstName + ' '+ user.lastName;
+    }
+
+    const users = [{
+      name: 'Genji',
+      type: 'C'
+    },{
+      name: 'Hanzo',
+      type: 'C'
+    },{
+      name: 'MEI',
+      type: 'C'
+    },{
+      name: 'D.va',
+      type: 'T'
+    }];
+
+    const element = (     
+      <ul>
+        {
+          users.map((user, index)=>
+          <li key={index}>{user.name} - {user.type}</li>)         
+        }
+      </ul>
+    );
+
+    
+    
+    
+
+
+    // const element = React.createElement(
+    //   'h2',
+    //   {className: 'greeting'},
+      
+    // )
+
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    )
+
+  </script>
+</body>
+</html>
