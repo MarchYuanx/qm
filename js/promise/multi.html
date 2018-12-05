@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const postsPromise = fetch('https://www.easy-mock.com/mock/5bca9240e6742c1bf8220bbd/kicamp/post');
+        const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+
+        Promise
+            .all([postsPromise, streetCarsPromise])
+            .then(responses => {
+                console.log(responses)
+                return Promise.all(responses.map(res=>res.json()))
+            })
+            .then(responses => {
+                console.log(responses)
+            })
+            .catch(err => {
+                console.log('出错了')
+            })
+
+        // console.log(postsPromise)
+        // console.log(streetCarsPromise)
+
+        // Promise 异步代码的顺序执行
+        // 1. 先执行哪个，一个结果是另一个的需求
+        // 2. 不管先后顺序，只要两者都执行完了就OK
+        
+        // postsPromise
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log('postsPromise')
+        //         console.log(data)
+        //         streetCarsPromise
+        //             .then(res => res.json())
+        //             .then(data => {
+        //                 console.log('streetCarsPromise')
+        //                 console.log(data)
+        //             })
+        //     })
+            
+            // postsPromise
+            // .then(res => res.json())
+            // .then(data => {
+            //     console.log('postsPromise')
+            //     console.log(data)
+            //     return streetCarsPromise               
+            // })
+            //     .then(res => res.json())
+            //     .then(data => {
+            //             console.log('streetCarsPromise')
+            //             console.log(data)
+            //         })
+
+            
+        
+    </script>
+</body>
+</html>
