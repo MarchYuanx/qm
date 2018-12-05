@@ -36,7 +36,6 @@
         context = this
         var now = + new Date();
         args = arguments;
-        console.log(args)
         if(now - previous > wait){
           func.apply(context, args);
           previous = now
