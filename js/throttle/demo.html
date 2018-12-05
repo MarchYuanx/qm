@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Throttle 节流</title>
+  <style>
+    #container{
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background: #666666;
+      line-height: 500px;
+      text-align: center;
+      color: white;
+      font-size: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">0</div>
+  <script>
+    const container = document.getElementById('container');
+
+    function getUserAction(){
+      let num = parseInt(this.innerHTML);
+      this.innerHTML = ++num;      
+    }
+    function throttle(func, wait){
+      var context, args;
+      var previous = 0;
+      console.log('throttle')
+      
+      return function(){
+        context = this
+        var now = + new Date();
+        args = arguments;
+        console.log(args)
+        if(now - previous > wait){
+          func.apply(context, args);
+          previous = now
+        }  
+      }
+    }
+
+    container.onmousemove = throttle(getUserAction,1000)
+
+  </script>
+</body>
+</html>
