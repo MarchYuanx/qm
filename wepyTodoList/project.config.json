@@ -1,0 +1,13 @@
+{
+  "description": "A WePY project",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "wx2e879ed38e74ed2d",
+  "projectname": "wepy-todolist",
+  "miniprogramRoot": "./dist"
+}
