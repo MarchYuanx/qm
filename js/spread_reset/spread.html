@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="people">
+        <p>Wes</p>
+        <p>Kait</p>
+        <p>Randy</p>
+        <p>March</p>
+    </div>
+
+    <script>
+
+        // NodeList 类数组
+
+        
+        // const people = Array.from(document.querySelectorAll('p'));
+        // console.log(people)
+
+        // people.map(people=>{
+        //     console.log(people.textContent)
+        // })
+        
+        
+        // const deepFish = {
+        //     pizzaName: 'deep fish',
+        //     size: 'Medium',
+        //     ingredients:['Marinara','Italian Sausage','Cheese','Dough']
+        // };
+   
+        
+        // const shoppingList  = ['milk','Flour',...deepFish.ingredients];
+        // console.log(shoppingList)
+
+        const team = ['孙大勇','天','小狗','小虎','麻辣香锅','小明','letme']
+        
+        const [captain, coach, ...players] = team //解构
+
+        console.log(captain, coach, players)
+
+        // const captain = team[0]
+        // const coach = team[1]
+        // const players = team.splice(2)
+
+
+
+    </script>
+</body>
+</html>

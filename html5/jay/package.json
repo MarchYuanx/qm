@@ -1,0 +1,19 @@
+{
+  "name": "jay",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
+    "webpack":"^4.20.2",
+    "webpack-cli":"^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "author": "MarchYuanx <592302815@qq.com> (http://github.com/MarchYuanx)",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "decorator_in_react",
+  "version": "0.1.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel demo.js -o compiled.js"
+  },
+  "keywords": [],
+  "author": "MarchYuanx <592302815@qq.com> (http://github.com/MarchYuanx)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-decorators": "^7.2.2"
+  }
+}

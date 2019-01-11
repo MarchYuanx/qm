@@ -1,0 +1,16 @@
+{
+  "name": "lxf_mysql",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MarchYuanx <592302815@qq.com> (http://github.com/MarchYuanx)",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  }
+}

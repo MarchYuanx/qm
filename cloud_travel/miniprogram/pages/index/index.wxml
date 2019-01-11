@@ -1,7 +1,7 @@
 <import src="../../components/travelCircle/travelCircle.wxml"/>
 
 <view class="container">
-  <view class="adInfos">
+  <view class="adInfos"> 
     <swiper wx:if="{{ads.length}}" autoplay="ture" indicator-dots="true" circular="true">
       <block wx:for="{{ads}}" wx:for-item="ad" wx:key="ad._id">
         <swiper-item>

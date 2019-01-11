@@ -1,0 +1,17 @@
+{
+  "name": "koa",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MarchYuanx <592302815@qq.com> (http://github.com/MarchYuanx)",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  }
+}

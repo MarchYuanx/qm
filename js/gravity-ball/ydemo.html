@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Y</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+
+        let XStart = 0, YStart = 0; XEnd = 500, YEnd = 500;
+        //运动时间
+        let XSpeed = 2;
+        let YSpeed = 2;
+        let Gravity = 0.001;
+        let Friction = 0.2*Gravity;
+
+        let nowX = XStart;
+        let nowY = YStart;
+        let loop = 0;
+        let count = 0;
+
+
+        //js 动态创建元素
+        let ball = document.createElement('div');
+        ball.className = 'ball';
+        document.body.appendChild(ball);    
+
+        let move = ()=>{
+            requestAnimationFrame(()=>{
+                if(nowY>=YEnd){
+                    loop=0;
+                    YSpeed = -1*YSpeed;
+                    console.log(YSpeed);
+                    bounce();
+                    return;
+                }
+                YSpeed += (Gravity-Friction)*loop;
+                
+                nowY += YSpeed;
+
+                ball.style.top = nowY + 'px';
+                
+                loop++;
+                move();
+
+            })
+
+        }
+
+        let bounce =()=>{
+            requestAnimationFrame(()=>{
+                if(YSpeed<=0){
+                    loop=0;
+                    move();
+                    return;
+                }
+
+                YSpeed += (Gravity+Friction)*loop;
+                
+                nowY += YSpeed;
+
+                ball.style.top = nowY + 'px';
+                
+                loop++;
+                bounce();
+
+            })
+        };
+        
+        move();
+    </script>   
+</body>
+</html>

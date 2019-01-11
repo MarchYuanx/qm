@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+div{
+    display: inline-block;
+}
+
+
+.ball{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    z-index: 1;
+}
+
+.ground{
+    top: 510px;
+    width: calc(100% - 5%);
+    
+    height: 8px;
+    background: #666;
+
+    z-index: 999;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+       
+    margin: auto;
+}
+
+.settingBox{
+    position: relative;
+    float: right;
+    padding: 10px;
+    width: 200px;
+}
+
+.settingPara{
+    width: 45%;
+}
+.settingBt{
+    width: 30%;
+}
+.startBt{
+    width: 75%;
+}

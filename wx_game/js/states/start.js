@@ -32,7 +32,7 @@ Phaser.State{
         this.load.image('bg_rank','images/bg_rank.png');
         this.load.image('bg_waiting','images/bg_waiting.png');
         this.load.image('btn', 'images/btn_menu.png');
-
+   
     }
     create(){
         // console.log('create')

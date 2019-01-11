@@ -1,0 +1,104 @@
+build: webpack配置
+config: 项目配置参数
+src
+
+actions: 存放 action 方法
+assets: 静态资源文件，存放图片啥的
+components: 常用组件
+reducers: 存放 reducer
+router: 路由管理
+store: 状态管理 redux
+styles: 样式文件
+utils: 常用封装
+views: 视图页面
+
+
+static: 静态文件： 存放 favicon.ico 等等
+
+效果演示
+
+
+知识点
+按需加载
+通过 import() 方法加载组件， 在通过高阶组件处理 import 返回的 Promise 结果。
+// asyncComponent.js
+import React from 'react'
+
+export default loadComponent => (
+    class AsyncComponent extends React.Component {
+        state = {
+            Component: null,
+        }
+        async componentDidMount() {
+            if (this.state.Component !== null) return
+            try {
+                const {default: Component} = await loadComponent()
+                this.setState({ Component })
+            }catch (err) {
+                console.error(`Cannot load component in <AsyncComponent />`);
+                throw err
+            }
+        }
+
+        render() {
+            const { Component } = this.state
+            return (Component) ? <Component {...this.props} /> : null
+        }
+    }
+)
+
+
+build: webpack配置
+config: 项目配置参数
+src
+
+actions: 存放 action 方法
+assets: 静态资源文件，存放图片啥的
+components: 常用组件
+reducers: 存放 reducer
+router: 路由管理
+store: 状态管理 redux
+styles: 样式文件
+utils: 常用封装
+views: 视图页面
+
+
+static: 静态文件： 存放 favicon.ico 等等
+
+效果演示
+
+
+知识点
+按需加载
+通过 import() 方法加载组件， 在通过高阶组件处理 import 返回的 Promise 结果。
+// asyncComponent.js
+import React from 'react'
+
+export default loadComponent => (
+    class AsyncComponent extends React.Component {
+        state = {
+            Component: null,
+        }
+        async componentDidMount() {
+            if (this.state.Component !== null) return
+            try {
+                const {default: Component} = await loadComponent()
+                this.setState({ Component })
+            }catch (err) {
+                console.error(`Cannot load component in <AsyncComponent />`);
+                throw err
+            }
+        }
+
+        render() {
+            const { Component } = this.state
+            return (Component) ? <Component {...this.props} /> : null
+        }
+    }
+)
+
+
+作者：cd-dongzi
+链接：https://juejin.im/post/5aca3be56fb9a028e46eeb69
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

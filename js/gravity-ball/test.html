@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抛物线运动</title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <div class="settingBox">
+        <input id="btXSpeed" type="text" class="settingPara" placeholder="plz set XSpeed" value="0"/>
+        <button class="settingBt" onclick="setXSpeed()">确定</button>
+        <input id="btYSpeed" type="text" class="settingPara" placeholder="plz set YSpeed" value="0"/>
+        <button class="settingBt" onclick="setYSpeed()">确定</button>
+        <input id="btGravity" type="text" class="settingPara" placeholder="plz set Gravity" value="10"/>
+        <button class="settingBt" onclick="setGravity()">确定</button>
+        <input id="btFriction" type="text" class="settingPara" placeholder="plz set Friction" value="2"/>
+        <button class="settingBt" onclick="setFriction()">确定</button>
+        <!-- <button class="startBt" onclick="move()">开始</button> -->
+        
+    </div>
+    <div class="ground"></div>
+    
+    
+    <script>
+
+    let setXSpeed =function(){
+        XSpeed = parseFloat(document.querySelector('#btXSpeed').value);
+        console.log('XSpeed '+XSpeed);
+        console.log(typeof XSpeed);
+    }
+    let setYSpeed =function(){
+        YSpeed = parseFloat(document.querySelector('#btYSpeed').value);
+        console.log('YSpeed '+YSpeed);
+        console.log(typeof YSpeed);
+    }
+    let setGravity =function(){
+        Gravity = parseFloat(document.querySelector('#btGravity').value);
+        console.log('Gravity '+Gravity);
+        console.log(typeof Gravity);
+    }
+    let setFriction =function(){
+        Friction = parseFloat(document.querySelector('#btFriction').value);
+        console.log('Friction '+Friction);
+        console.log(typeof Friction);
+    }
+
+
+        //抛物线开始点坐标 结束点坐标
+        let XStart = 0, YStart = 0; XEnd = 500, YEnd = 500;
+        //运动时间
+        let Time = 100;//ms 
+        // let XSpeed = (XEnd - XStart) / Time;
+        let XSpeed = 2;
+        let YSpeed = (YEnd - YStart) / Time;
+        let Gravity = 2*(YEnd - YStart) / (Time*Time);
+        let Friction = 0.2*Gravity;
+        
+        
+        //js 动态创建元素
+        let ball = document.createElement('div');
+        ball.className = 'ball';
+        document.body.appendChild(ball);
+
+        ball.style.top = YStart + 'px';
+        ball.style.left = XStart + 'px';
+
+        // ground.style.top = (YEnd + ball.style.height)+'px';
+
+        let nowX = XStart;
+        let nowY = YStart;
+        let loop = 0;
+        let count = 0;
+
+
+        
+
+        // 递归 
+        let move = () => {
+                requestAnimationFrame(()=>{
+
+                if(nowY >= YEnd){
+                    
+                    // ball.parentNode.removeChild(ball);
+                    loop=0;
+                    count++;
+                    if(count>25){
+                        return;
+                    }
+                    // Gravity = 0.5*Gravity;
+                    bounce();
+                    return;
+                }            
+
+                // nowX += XSpeed;
+                // nowY += Gravity*loop;
+                nowX += XSpeed;
+                // YSpeed += (Gravity-Friction)*loop;
+                
+                nowY += (Gravity-Friction)*loop;
+
+                ball.style.top = nowY + 'px';
+                ball.style.left = nowX + 'px';
+                            
+                loop++;
+                move();
+                
+            })
+        }
+
+
+        let bounce = () => {
+            
+            requestAnimationFrame(()=>{
+                if(YSpeed==0){
+                    // Gravity = 2*Gravity;
+                    loop = 0;                   
+                    move();
+                    return;
+                }
+            nowX += XSpeed;
+            YSpeed -= (Gravity+Friction)*loop ;
+            nowY -= YSpeed;    
+ 
+            ball.style.top = nowY + 'px';
+            ball.style.left = nowX + 'px';
+
+            loop++;
+            bounce();
+            })
+            
+            
+        }
+
+
+
+
+
+        move();
+        
+        
+
+    </script>
+</body>
+</html>

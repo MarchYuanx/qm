@@ -15,8 +15,12 @@ const ms2Time = (milliseconds) => {
 }
 
 
-const MajorClock = ({milliseconds=0}) => {
-  return <h1>{ms2Time(milliseconds)}</h1>
+const clockStyle = {
+  'fontFamily': 'monospace'
 };
+
+const MajorClock = ({milliseconds=0}) => {
+  return <h1 style={clockStyle}>{ms2Time(milliseconds)}</h1>
+}
 
 export default MajorClock;

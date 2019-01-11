@@ -61,6 +61,12 @@
             <div class="imgBox">
                     <img src="http://alloyteam.github.io/AlloyFinger/asset/test.png" alt="" id="pinchImg">
             </div>
+
+            <div class="title">rotate</div>
+            <div class="imgBox">
+                    <img src="http://alloyteam.github.io/AlloyFinger/asset/test.png" alt="" id="rotateImg">
+            </div>
+
         </div>
 
         <script src="http://alloyteam.github.io/AlloyFinger/asset/transform.js"></script>
@@ -80,6 +86,31 @@
                     initStart = pinchImg.scaleX
                 }
             })
+
+        
+        const rotateImg = document.getElementById('rotateImg');
+        Transform(pinchImg);
+        new AlloyFinger(rotateImg,{
+            rotate: function(evt){
+                rotateImg.rotateZ += evt.angle;
+            }
+        });
+
+        
+        const pinchRotateImg = document.getElementById('pinchRotateImg');
+        Transform(pinchRotateImg)
+        new AlloyFinger(pinchRotateImg,{
+            rotate: function(evt){
+                pinchRotateImg.rotateZ += evt.angle
+            },
+            multipointStart:function(){
+                initScale = pinchRotateImg.scaleX;
+            },
+            pinch: function(evt){
+                pinchRoateImg.scaleX = pinchRoateImg.scaleY = initScale * evt.zoom;
+            }
+        })
+
         </script>
 
 </body>

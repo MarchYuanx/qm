@@ -1,0 +1,15 @@
+{
+  "name": "auto_run",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MarchYuanx <592302815@qq.com> (http://github.com/MarchYuanx)",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

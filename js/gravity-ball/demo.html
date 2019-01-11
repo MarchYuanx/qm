@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抛物线运动</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="ground"></div>
+    <div class="settingBox">
+        <button onclick="move()">开始</button>
+    </div>
+    <script>
+        //抛物线开始点坐标 结束点坐标
+        let XStart = 0, YStart = 0; XEnd = 500, YEnd = 500;
+        //运动时间
+        let Time = 50;//ms
+        // let XSpeed = (XEnd - XStart) / Time;
+        let XSpeed = 2;
+        let YSpeed = (YEnd - YStart) / Time;
+        let Gravity = 2*(YEnd - YStart) / (Time*Time);
+        let Friction = 0.2*Gravity;
+        
+        //js 动态创建元素
+        let ball = document.createElement('div');
+        ball.className = 'ball';
+        document.body.appendChild(ball);
+
+        ball.style.top = YStart + 'px';
+        ball.style.left = XStart + 'px';
+
+        // ground.style.top = (YEnd + ball.style.height)+'px';
+
+        let nowX = XStart;cc
+        let nowY = YStart;
+        let loop = 0;
+        let count = 0;
+
+
+        
+
+        // 递归
+        let move = () => {
+                requestAnimationFrame(()=>{
+
+                if(nowY >= YEnd){
+                    
+                    // ball.parentNode.removeChild(ball);
+                    count++;
+                    if(count>25){
+                        return;
+                    }
+                    
+                    
+                    bounce();
+                    return;
+                }            
+
+                nowX += XSpeed;
+                nowY += (Gravity-Friction)*loop;
+
+                ball.style.top = nowY + 'px';
+                ball.style.left = nowX + 'px';
+                            
+                loop++;
+                move();
+                
+            })
+        }
+
+
+        let bounce = () => {
+            
+            requestAnimationFrame(()=>{
+                if(loop<=0){
+                    
+                                      
+                    move();
+                    return;
+                }
+            nowX += XSpeed;
+            nowY -= (Gravity+Friction)*loop ;
+
+            ball.style.top = nowY + 'px';
+            ball.style.left = nowX + 'px';
+
+            loop--;
+            bounce();
+            })
+            
+            
+        }
+
+
+
+
+
+        
+        
+        
+
+    </script>
+</body>
+</html>
