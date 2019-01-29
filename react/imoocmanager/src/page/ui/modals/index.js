@@ -32,14 +32,14 @@ export default class Buttons extends React.Component {
   render () {
     return (
       <div>
-        <Card title="基础模态框" className="card button-wrap">
+        <Card title="基础模态框" className="card">
           <Button type="primary" onClick={()=>this.handleOpen('showModal1')}>open</Button>
           <Button type="primary" onClick={()=>this.handleOpen('showModal2')}>custom</Button>
           <Button type="primary" onClick={()=>this.handleOpen('showModal3')}>top 20px</Button>
           <Button type="primary" onClick={()=>this.handleOpen('showModal4')}>centered</Button>
         </Card>
 
-        <Card title="信息确认框" className="card button-wrap">
+        <Card title="信息确认框" className="card">
           <Button type="primary" onClick={()=>this.handleComfirm('confirm')}>confirm</Button>
           <Button type="primary" onClick={()=>this.handleComfirm('info')}>info</Button>
           <Button type="primary" onClick={()=>this.handleComfirm('success')}>success</Button>

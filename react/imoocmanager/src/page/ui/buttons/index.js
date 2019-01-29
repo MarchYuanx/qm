@@ -24,7 +24,7 @@ export default class Buttons extends React.Component {
   render(){
     return (
       <div>
-        <Card title="基础按钮" className="card button-wrap">
+        <Card title="基础按钮" className="card">
           <Button type="primary">primary</Button>
           <Button type="ghost">ghost</Button>
           <Button type="default">default</Button>
@@ -32,7 +32,7 @@ export default class Buttons extends React.Component {
           <Button type="danger">danger</Button>
           <Button disabled>disabled</Button>
         </Card>
-        <Card title="图形按钮" className="card button-wrap">
+        <Card title="图形按钮" className="card">
           <Button icon="plus">plus</Button>
           <Button icon="edit">edit</Button>
           <Button icon="delete">delete</Button>
@@ -40,7 +40,7 @@ export default class Buttons extends React.Component {
           <Button shape="circle" icon="download"></Button>
           <Button type="primary" icon="download">download</Button>
         </Card>
-        <Card title="Loading按钮" className="card button-wrap">
+        <Card title="Loading按钮" className="card">
           <Button type="primary" loading={this.state.loading}>Loading</Button>
           <Button type="primary" icon="download" loading={this.state.loading} shape="circle"></Button>
           <Button loading={this.state.loading}>Loading</Button>
@@ -48,7 +48,7 @@ export default class Buttons extends React.Component {
         </Card>
         <Card title="按钮组" className="card">
           <Button.Group>
-            <Button type="primary">
+            <Button type="primary" style={{marginRight: 0}}>
               <Icon type="left" />Backward
             </Button>
             <Button type="primary">
@@ -56,7 +56,7 @@ export default class Buttons extends React.Component {
             </Button>
           </Button.Group>
         </Card>
-        <Card title="按钮尺寸" className="card button-wrap">
+        <Card title="按钮尺寸" className="card">
           <Radio.Group value={this.state.size} onChange={this.handleChange}>
             <Radio value="small">small</Radio>
             <Radio value="default">default</Radio>
