@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter , Route , Link, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import App from './App';
 import Admin from './admin';
 import Login from './page/login';
@@ -7,6 +7,14 @@ import Home from './page/home';
 import Buttons from './page/ui/buttons';
 import Modals from './page/ui/modals';
 import Loading from './page/ui/loading';
+import Notice from './page/ui/notice';
+import Message from './page/ui/message';
+import Tabs from './page/ui/tabs';
+import Gallery from './page/ui/gallery';
+import Carousel from './page/ui/carousel';
+import LoginForm from './page/form/login';
+import RegisterForm from './page/form/register';
+import BasicTable from  './page/table/basicTable';
 import NotMatch from './page/notMatch';
 
 export default class MyRouter extends React.Component {
@@ -14,6 +22,9 @@ export default class MyRouter extends React.Component {
     return (
       <HashRouter>
         <App>
+          <Route exact path='/'  render={()=> (
+            <Redirect to={"/admin"}/>
+          )}/>
           <Route path="/admin" render={()=>
             <Admin>
               <Switch>
@@ -22,6 +33,14 @@ export default class MyRouter extends React.Component {
                 <Route path="/admin/ui/buttons" component={Buttons}/>
                 <Route path="/admin/ui/modals" component={Modals}/>
                 <Route path="/admin/ui/loading" component={Loading}/>
+                <Route path="/admin/ui/notification" component={Notice}/>
+                <Route path="/admin/ui/message" component={Message}/>
+                <Route path="/admin/ui/tabs" component={Tabs}/>
+                <Route path="/admin/ui/gallery" component={Gallery}/>
+                <Route path="/admin/ui/carousel" component={Carousel}/>
+                <Route path="/admin/form/login" component={LoginForm}/>
+                <Route path="/admin/form/reg" component={RegisterForm}/>
+                <Route path="/admin/table/basic" component={BasicTable}/>
                 <Route component={NotMatch}/>
               </Switch>
             </Admin>
