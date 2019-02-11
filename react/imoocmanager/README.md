@@ -3,12 +3,16 @@
 
 ### 部分功能截图预览
 > 首页
+
 ![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/home.png)
 > 注册
+
 ![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/reg.png)
 > 画廊
+
 ![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/gallery.jpg)
 > 表单
+
 ![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/table.png)
 
 ### 目标功能 
