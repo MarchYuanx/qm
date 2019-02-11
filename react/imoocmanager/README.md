@@ -4,16 +4,16 @@
 ### 部分功能截图预览
 > 首页
 
-![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/home.png)
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/home.png)
 > 注册
 
-![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/reg.png)
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/reg.png)
 > 画廊
 
-![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/gallery.jpg)
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/gallery.jpg)
 > 表单
 
-![Image text](https://github.com/MarchYuanx/readme_image/blob/master/marchms/table.png)
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/table.png)
 
 ### 目标功能 
 
