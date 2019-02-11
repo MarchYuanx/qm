@@ -11,3 +11,10 @@
  [ ] 员工管理
  [ ] 车辆地图
  [ ] 权限设置
+
+### command line  
+
+- [ ] initiate  
+- [ ] participate  
+- [ ] redeem  
+- [ ] refund  
