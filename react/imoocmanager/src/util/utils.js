@@ -17,4 +17,20 @@ export default {
   if(second<10) second = '0' + second;
 
   return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-}}
+  },
+  pagination: (data, callback)=>{
+    return {
+      onChange: (current)=>{
+        callback(current)
+      },  
+      current: data.result.page,
+      pageSize: data.result.page_size,
+      total: data.result.total,
+      showTotal:()=>{
+        return `共${data.result.total}条数据`
+      },
+      //showQuickJumper: true
+    }
+  }
+
+}
