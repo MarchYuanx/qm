@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Tabs, message, Icon } from 'antd';
 import '../ui.less';
-import './index.less';
 
 const TabPane = Tabs.TabPane;
 

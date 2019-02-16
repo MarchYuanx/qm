@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Modal } from 'antd';
 import '../ui.less';
-import './index.less';
 const { Meta } = Card;
 
 export default class Gallery extends React.Component {

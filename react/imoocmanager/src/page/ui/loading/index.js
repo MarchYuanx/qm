@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Spin, Icon, Alert } from 'antd';
 import '../ui.less';
-import './index.less';
 
 export default class Loading extends React.Component {
   render() {

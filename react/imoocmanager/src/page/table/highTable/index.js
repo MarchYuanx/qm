@@ -34,7 +34,7 @@ export default class HighTable extends React.Component {
   }
   
   handleDelete = (item)=>{
-    let id = item.id;
+    //let id = item.id;
     Modal.confirm({
       title:'确认',
       content:'您确定要删除本条数据吗？',

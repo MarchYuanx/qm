@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Carousel } from 'antd';
 import '../ui.less';
-import './index.less';
 
 export default class Carousels extends React.Component {
   render () {

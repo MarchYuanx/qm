@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Card, Modal } from 'antd';
 import '../ui.less';
-import './index.less';
 
 export default class Buttons extends React.Component {
   state = {

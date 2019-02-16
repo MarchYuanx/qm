@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Form, Input, Button, Icon, message, Checkbox, Radio, InputNumber, Select, Switch, DatePicker, TimePicker, Upload } from 'antd';
 import moment from 'moment';
-import './index.less';
 
 const Item = Form.Item;
 const Group = Radio.Group;
