@@ -1,41 +1,6 @@
 # React后台管理系统
 基于React + Antd + Axios + less + ES6 + easymock等开发的通用后台管理系统
 
-### 项目结构
-
-
-├─public
-│  └─assets
-├─scripts
-└─src
-    ├─axios
-    ├─components
-    │  ├─Footer
-    │  ├─Header
-    │  └─NavLeft
-    ├─config
-    ├─page
-    │  ├─city
-    │  ├─form
-    │  │  ├─login
-    │  │  └─register
-    │  ├─home
-    │  ├─login
-    │  ├─notMatch
-    │  ├─table
-    │  │  ├─basicTable
-    │  │  └─highTable
-    │  └─ui
-    │      ├─buttons
-    │      ├─carousel
-    │      ├─gallery
-    │      ├─loading
-    │      ├─message
-    │      ├─modals
-    │      ├─notice
-    │      └─tabs
-    ├─style
-    └─util
 
 ### 部分功能截图预览
 > 首页
