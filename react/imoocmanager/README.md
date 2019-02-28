@@ -15,15 +15,18 @@
 > 表格
 
 ![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/highTable.gif)
+> 富文本
 
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/richText.gif)
 ### 目标功能 
 
 - [x] 常用UI组件  
 - [x] 表单
 - [x] 表格  
+- [x] 富文本
 - [x] 城市管理 
 - [ ] 订单管理
 - [ ] 员工管理 
 - [ ] 车辆地图 
 - [ ] 权限设置 
-- [ ] 富文本
+

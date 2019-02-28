@@ -33,7 +33,10 @@ export default class City extends React.Component {
           return item;
         })
         this.setState({
-          dataSource: res.result.item_list
+          dataSource: res.result.item_list,
+          pagination: Util.pagination(res,(current)=>{
+            this.params.page = current;
+          })
         })
       }
     })

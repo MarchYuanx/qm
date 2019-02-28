@@ -19,6 +19,9 @@ export default {
   return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
   },
   pagination: (data, callback)=>{
+    console.log('[page]',data.result.page)
+    console.log('[page_size]',data.result.page_size)
+    console.log('[total]',data.result.total)
     return {
       onChange: (current)=>{
         callback(current)
