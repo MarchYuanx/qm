@@ -19,6 +19,8 @@ import HighTable from  './page/table/highTable';
 import Rich from  './page/rich';
 import City from  './page/city';
 import Order from  './page/order';
+import Common from  './common';
+import OrderDetail from  './page/order/detail.js';
 import NotMatch from './page/notMatch';
 
 export default class MyRouter extends React.Component {
@@ -54,6 +56,11 @@ export default class MyRouter extends React.Component {
             </Admin>
           }/>
           <Route path="/login" component={Login}/>
+          <Route path="/common" render={()=>
+            <Common>
+              <Route path="/common/order/detail/:orderId" component={OrderDetail}/>
+            </Common>
+          }/>
         </App>
       </HashRouter>
     )

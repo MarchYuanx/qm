@@ -2,7 +2,7 @@ import React from 'react';
 import '../../style/common.less';
 import Util from './../../util/utils';
 import axios from '../../axios'
-import { Card, Button, Table, Form, Select, Modal, message, DatePicker } from 'antd';
+import { Card, Button, Table, Form, Select, Modal, DatePicker } from 'antd';
 
 const FormItem= Form.Item; 
 const Option = Select.Option;
@@ -33,12 +33,37 @@ export default class Order extends React.Component{
           dataSource: res.result.item_list,
           pagination: Util.pagination(res,(current)=>{
             this.params.page = current;
+            this.requestList()
           })
         })
       }
     })
   }
+  onRowClick = (record,index)=>{
+    let selectKey = [index];
+    this.setState({
+      selectedRowKeys: selectKey,
+      selectedItem: record
+    })
+  }
+  openOrderDetail = () => {
+    let item = this.state.selectedItem;
+    if (!item) {
+      Modal.info({
+        title: '信息',
+        content: '请先选择一条订单'
+      });
+      return;
+    }
+    // 通过window.open 进行路由的跳转
+    window.open('/#/common/order/detail/' + item.id, '_blank');
+  };
   render(){
+    const selectedRowKeys = this.state.selectedRowKeys;
+    const rowSelection = {
+      type: 'radio',
+      selectedRowKeys
+    }
     const columns = [
       {
         title: '订单编号',
@@ -94,14 +119,25 @@ export default class Order extends React.Component{
           <FilterForm/>
         </Card>
         <Card style={{marginTop: 16}}>
-          <Button>订单详情</Button>
-          <Button>结束订单</Button>
+          <Button type="primary" onClick={this.openOrderDetail}>订单详情</Button>
+          <Button type="primary" style={{marginLeft:16}}>结束订单</Button>
         </Card>
         <div className="content-wrap">
           <Table
             bordered
             columns = {columns}
+            rowSelection={rowSelection}
+            selectedRowKeys={this.state.selectedRowKeys}
+            selectedItem={this.state.selectedItem}
             dataSource = {this.state.dataSource}
+            pagination={this.state.pagination}
+            onRow={(record,index)=>{
+              return {
+                onClick:()=>{
+                  this.onRowClick(record,index);
+                }
+              }
+            }}
           />
         </div>
       </div>
@@ -134,6 +170,9 @@ class FilterForm extends React.Component{
             <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" />
           )
         }
+
+        </FormItem>
+        <FormItem >
         {
           getFieldDecorator('end_time')(
             <DatePicker style={{marginLeft: 16}} showTime format="YYYY-MM-DD HH:mm:ss" />
