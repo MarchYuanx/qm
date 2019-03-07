@@ -20,7 +20,10 @@ import Rich from  './page/rich';
 import City from  './page/city';
 import Order from  './page/order';
 import Common from  './common';
-import OrderDetail from  './page/order/detail.js';
+import OrderDetail from  './page/order/detail';
+import Bar from  './page/echarts/bar';
+import Pie from  './page/echarts/pie';
+import Line from  './page/echarts/line';
 import NotMatch from './page/notMatch';
 
 export default class MyRouter extends React.Component {
@@ -51,6 +54,9 @@ export default class MyRouter extends React.Component {
                 <Route path="/admin/rich" component={Rich}/>
                 <Route path="/admin/city" component={City}/>
                 <Route path="/admin/order" component={Order}/>
+                <Route path="/admin/charts/bar" component={Bar}/>
+                <Route path="/admin/charts/pie" component={Pie}/>
+                <Route path="/admin/charts/line" component={Line}/>
                 <Route component={NotMatch}/>
               </Switch>
             </Admin>
