@@ -1,5 +1,5 @@
 # React后台管理系统
-基于React + Antd + Axios + less + ES6 + easymock等开发的通用后台管理系统
+基于React + Antd + Axios + less + ES6 + easymock + Echarts 等开发的通用后台管理系统
 
 
 ### 部分功能截图预览
@@ -21,6 +21,9 @@
 > 订单
 
 ![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/order.gif)
+> 图表
+
+![Image text](https://github.com/MarchYuanx/qm/blob/master/react/imoocmanager/image/echarts.gif)
 ### 目标功能 
 
 - [x] 常用UI组件  
@@ -29,6 +32,7 @@
 - [x] 富文本
 - [x] 城市管理 
 - [x] 订单管理
+- [x] 数据图表
 - [ ] 员工管理 
 - [ ] 车辆地图 
 - [ ] 权限设置 
