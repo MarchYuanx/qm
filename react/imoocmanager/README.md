@@ -1,6 +1,6 @@
 # React后台管理系统
 基于React + Antd + Axios + less + ES6 + easymock + Echarts 等开发的通用后台管理系统
-
+:star:对河畔一角老师的实战课程实现 课程地址https://coding.imooc.com/class/236.html
 
 ### 部分功能截图预览
 > 首页
